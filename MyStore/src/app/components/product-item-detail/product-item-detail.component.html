@@ -1,0 +1,18 @@
+<div class="container">
+
+  <div class="detail-container">
+    <img [src]="itemDetail.url" class="img-fluid">
+    <div class="detail-item">
+      <h4>{{itemDetail.name}}</h4>
+      <p>{{itemDetail.price}}$</p>
+      <span style="font-size: 26px">{{itemDetail.description}}</span>
+      <br>
+      <input class="select-input " #quantity type="number" value="1" min="1" max="10" name="quantity">
+      <br>
+      <br>
+      <button class="btn btn-primary" (click)="AddtoCart(itemDetail , quantity.value)">Add to Cart</button>
+      <br>
+      <a routerLink=""> Back to Product List</a>
+    </div>
+
+  </div>
